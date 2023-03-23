@@ -1,5 +1,5 @@
 class Node
-  include Comparable
+  # include Comparable
   attr_accessor :data, :left, :right
 
   def initialize(data)
@@ -8,7 +8,7 @@ class Node
     @right = nil
   end
 
-  def <=>(other)
-    @data <=> other.data
-  end
+  # def <=>(other)
+  #   @data <=> other.data
+  # end
 end
