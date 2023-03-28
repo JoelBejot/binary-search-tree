@@ -177,7 +177,7 @@ class Tree
   end
 
   # Returns boolean whether or not the tree is balanced. 
-  # I.e., the right sub-tree is not more or less than one level different than the left sub-tree
+  # I.e., the right sub-tree is not more than one level different than the left sub-tree
   def balanced?(node = self.root)
     return true if node.nil?
 
