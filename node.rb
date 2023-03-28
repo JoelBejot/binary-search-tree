@@ -1,5 +1,5 @@
+# Short class that establishes the nodes in the binary tree
 class Node
-  # include Comparable
   attr_accessor :data, :left, :right
 
   def initialize(data)
@@ -7,8 +7,4 @@ class Node
     @left = nil
     @right = nil
   end
-
-  # def <=>(other)
-  #   @data <=> other.data
-  # end
 end

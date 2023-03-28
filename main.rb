@@ -1,6 +1,7 @@
 require './binary-tree.rb'
 require './node.rb'
 
+# Driver program that tests the methods of the binary tree
 p "Creating a new Binary Search Tree..."
 array = (Array.new(15) { rand(1..100) })
 bst = Tree.new(array)
