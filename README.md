@@ -82,3 +82,24 @@ Rebuilds the binary tree using in-order traversal. Checks for duplicates.
 ### pretty_print
 
 Method given from the project to print the binary tree in an attractive manner.
+
+--non-wording delete methods
+  def delete(value, node = root)
+    return nil if node.nil?
+
+    if node.left && node.right
+      node.data = find_min(node.right).data
+      node.right = delete(node.data, node.right)
+    else
+      node.left = delete(value, node.left) if value < node.data
+      node.right = delete(value, node.right) if value > node.data
+      node = delete_helper(node)
+    end
+    node
+  end
+
+  def delete_helper(node = root)
+    return node.left unless node.left.nil?
+    return node.right unless node.right.nil?
+    return nil unless node.left.nil? && node.right.nil?
+  end
